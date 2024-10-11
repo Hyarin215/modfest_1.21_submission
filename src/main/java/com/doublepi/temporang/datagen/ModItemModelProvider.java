@@ -12,6 +12,6 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(ModItems.STONE_BOOMERANG.get());
-
+        basicItem(ModItems.PORTABLE_CRAFTING_TABLE.get());
     }
 }

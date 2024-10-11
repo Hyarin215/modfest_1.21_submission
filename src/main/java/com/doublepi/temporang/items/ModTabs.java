@@ -25,8 +25,8 @@ public class ModTabs {
             .displayItems((parameters, output) -> {
 
 
-
-                output.accept(ModItems.STONE_BOOMERANG.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
+                output.accept(ModItems.PORTABLE_CRAFTING_TABLE.get());
+                output.accept(ModItems.STONE_BOOMERANG.get());
             }).build());
 
     public static void register(IEventBus eventBus){
