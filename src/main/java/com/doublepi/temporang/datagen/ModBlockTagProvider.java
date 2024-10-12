@@ -2,6 +2,7 @@ package com.doublepi.temporang.datagen;
 
 
 import com.doublepi.temporang.TemporangMod;
+import com.doublepi.temporang.blocks.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -17,19 +18,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     }
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
-//        this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
-//                .add(ModBlocks.BLACK_OPAL_BLOCK.get())
-//                .add(ModBlocks.RAW_BLACK_OPAL_BLOCK.get())
-//                .add(ModBlocks.BLACK_OPAL_ORE.get())
-//                .add(ModBlocks.BLACK_OPAL_DEEPSLATE_ORE.get())
-//                .add(ModBlocks.BLACK_OPAL_END_ORE.get())
-//                .add(ModBlocks.BLACK_OPAL_NETHER_ORE.get())
-//                .add(ModBlocks.MAGIC_BLOCK.get());
-//        this.tag(BlockTags.NEEDS_IRON_TOOL)
-//                .add(ModBlocks.BLACK_OPAL_ORE.get())
-//                .add(ModBlocks.BLACK_OPAL_DEEPSLATE_ORE.get());
-//        this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
-//                .add(ModBlocks.BLACK_OPAL_END_ORE.get())
-//                .add(ModBlocks.BLACK_OPAL_NETHER_ORE.get());
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(ModBlocks.BLOCK_COMPARATOR.get());
+        this.tag(BlockTags.NEEDS_STONE_TOOL)
+                .add(ModBlocks.BLOCK_COMPARATOR.get());
     }
 }

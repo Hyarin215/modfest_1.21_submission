@@ -2,7 +2,8 @@ package com.doublepi.temporang.items;
 
 import com.doublepi.temporang.TemporangMod;
 import com.doublepi.temporang.items.boomerangs.StoneBoomerangItem;
-import com.doublepi.temporang.items.stone_age_items.PortableCraftingTableItem;
+import com.doublepi.temporang.items.rewards.PortableCraftingTableItem;
+import com.doublepi.temporang.items.rewards.QuantumAcceleratorItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -17,6 +18,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> PORTABLE_CRAFTING_TABLE = ITEMS.register("portable_crafting_table",
         ()-> new PortableCraftingTableItem(new Item.Properties().stacksTo(1)));
+
+    public static final DeferredItem<Item> QUANTUM_ACCELERATOR= ITEMS.register("quantum_accelerator",
+            ()-> new QuantumAcceleratorItem(new Item.Properties().stacksTo(1).durability(2048)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -1,10 +1,12 @@
 package com.doublepi.temporang.blocks;
 
 import com.doublepi.temporang.TemporangMod;
+import com.doublepi.temporang.blocks.rewards.BlockComparator;
 import com.doublepi.temporang.items.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
@@ -16,12 +18,14 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(TemporangMod.MOD_ID);
 
-    // Creates a new Block with the id "temporang:example_block", combining the namespace and path
+    public static final DeferredBlock<Block> BLOCK_COMPARATOR = registerBlock("block_comparator",
+            ()-> new BlockComparator(BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){
-        DeferredBlock<T> toReturn = BLOCKS.register(name,block); //creating & registering block
-        registerBlockItem(name,toReturn); //creating & registering block item
+        DeferredBlock<T> toReturn = BLOCKS.register(name,block);
+        registerBlockItem(name,toReturn);
         return toReturn;
     }
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block){

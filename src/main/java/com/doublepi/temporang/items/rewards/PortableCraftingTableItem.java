@@ -1,4 +1,4 @@
-package com.doublepi.temporang.items.stone_age_items;
+package com.doublepi.temporang.items.rewards;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;

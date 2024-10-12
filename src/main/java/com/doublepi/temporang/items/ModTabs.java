@@ -24,7 +24,7 @@ public class ModTabs {
             .icon(() -> ModItems.STONE_BOOMERANG.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
 
-
+                output.accept(ModItems.QUANTUM_ACCELERATOR.get());
                 output.accept(ModItems.PORTABLE_CRAFTING_TABLE.get());
                 output.accept(ModItems.STONE_BOOMERANG.get());
             }).build());
