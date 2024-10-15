@@ -25,6 +25,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         @Override
         protected void generate() {
             dropSelf(ModBlocks.BLOCK_COMPARATOR.get());
+
 //            this.add(ModBlocks.BLACK_OPAL_ORE.get(),
 //                    block -> createOreDrop(ModBlocks.BLACK_OPAL_ORE.get(), ModItems.RAW_BLACK_OPAL.get()));
 //            this.add(ModBlocks.BLACK_OPAL_DEEPSLATE_ORE.get(),

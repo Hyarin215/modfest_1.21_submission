@@ -23,7 +23,8 @@ public class ModTabs {
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> ModItems.STONE_BOOMERANG.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
-
+                output.accept(ModBlocks.BLOCK_COMPARATOR);
+                output.accept(ModBlocks.TEMPORAL_PORTAL_MIDDLE);
                 output.accept(ModItems.QUANTUM_ACCELERATOR.get());
                 output.accept(ModItems.PORTABLE_CRAFTING_TABLE.get());
                 output.accept(ModItems.STONE_BOOMERANG.get());

@@ -7,13 +7,10 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.util.Mth;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.level.Level;
 
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.entity.AgeableMob;
-import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.animal.Animal;
@@ -29,7 +26,9 @@ public class TemporalPortalEntity extends Animal {
 
     public TemporalPortalEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
+        this.noPhysics=true;
     }
+
 
 //    @Override
 //    protected void registerGoals() {
@@ -60,6 +59,11 @@ public class TemporalPortalEntity extends Animal {
 
 
     @Override
+    protected void defineSynchedData(SynchedEntityData.Builder builder) {
+
+    }
+
+    @Override
     public void tick() {
         super.tick();
         if(this.level().isClientSide())
@@ -76,10 +80,6 @@ public class TemporalPortalEntity extends Animal {
             }
         }
     }
-
-
-
-
 
 
     @Override

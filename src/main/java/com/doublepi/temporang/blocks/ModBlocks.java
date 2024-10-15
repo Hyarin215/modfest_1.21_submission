@@ -2,13 +2,14 @@ package com.doublepi.temporang.blocks;
 
 import com.doublepi.temporang.TemporangMod;
 import com.doublepi.temporang.blocks.rewards.BlockComparator;
+import com.doublepi.temporang.blocks.temporal_portal.AbstractTemporalPortalBlock;
 import com.doublepi.temporang.items.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -22,6 +23,17 @@ public class ModBlocks {
             ()-> new BlockComparator(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
+    public static final DeferredBlock<Block> TEMPORAL_PORTAL_MIDDLE = registerBlock("temporal_portal",
+            ()-> new AbstractTemporalPortalBlock(BlockBehaviour.Properties.of().pushReaction(PushReaction.BLOCK)
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.ANCIENT_DEBRIS),0));
+
+    public static final DeferredBlock<Block> TEMPORAL_PORTAL_TOP = registerBlock("temporal_portal_top",
+            ()-> new AbstractTemporalPortalBlock(BlockBehaviour.Properties.of().pushReaction(PushReaction.BLOCK)
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.ANCIENT_DEBRIS),1));
+
+    public static final DeferredBlock<Block> TEMPORAL_PORTAL_BOTTOM = registerBlock("temporal_portal_bottom",
+            ()-> new AbstractTemporalPortalBlock(BlockBehaviour.Properties.of().pushReaction(PushReaction.BLOCK)
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.ANCIENT_DEBRIS),-1));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){
         DeferredBlock<T> toReturn = BLOCKS.register(name,block);
