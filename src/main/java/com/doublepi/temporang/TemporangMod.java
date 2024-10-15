@@ -1,5 +1,6 @@
 package com.doublepi.temporang;
 
+import com.doublepi.temporang.blocks.ModBlockEntities;
 import com.doublepi.temporang.blocks.ModBlocks;
 import com.doublepi.temporang.entities.ModEntities;
 import com.doublepi.temporang.entities.ModEntityRenderers;
@@ -47,6 +48,7 @@ public class TemporangMod
         ModItems.register(modEventBus);
         ModTabs.register(modEventBus);
         ModEntities.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (temporang) to respond directly to events.

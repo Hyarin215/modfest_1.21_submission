@@ -1,8 +1,6 @@
 package com.doublepi.temporang.blocks;
 
 import com.doublepi.temporang.TemporangMod;
-import com.doublepi.temporang.blocks.rewards.BlockComparator;
-import com.doublepi.temporang.blocks.temporal_portal.AbstractTemporalPortalBlock;
 import com.doublepi.temporang.items.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -23,6 +21,10 @@ public class ModBlocks {
             ()-> new BlockComparator(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
+    public static final DeferredBlock<Block> TOTEM = registerBlock("totem",
+            ()-> new TotemBlock(BlockBehaviour.Properties.of()
+                    .strength(4f).sound(SoundType.WOOD)));
+
     public static final DeferredBlock<Block> TEMPORAL_PORTAL_MIDDLE = registerBlock("temporal_portal",
             ()-> new AbstractTemporalPortalBlock(BlockBehaviour.Properties.of().pushReaction(PushReaction.BLOCK)
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.ANCIENT_DEBRIS),0));
@@ -34,6 +36,8 @@ public class ModBlocks {
     public static final DeferredBlock<Block> TEMPORAL_PORTAL_BOTTOM = registerBlock("temporal_portal_bottom",
             ()-> new AbstractTemporalPortalBlock(BlockBehaviour.Properties.of().pushReaction(PushReaction.BLOCK)
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.ANCIENT_DEBRIS),-1));
+
+
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){
         DeferredBlock<T> toReturn = BLOCKS.register(name,block);

@@ -2,6 +2,7 @@ package com.doublepi.temporang.items;
 
 import com.doublepi.temporang.TemporangMod;
 import com.doublepi.temporang.items.boomerangs.StoneBoomerangItem;
+import com.doublepi.temporang.items.rewards.CarvingKnifeItem;
 import com.doublepi.temporang.items.rewards.PortableCraftingTableItem;
 import com.doublepi.temporang.items.rewards.QuantumAcceleratorItem;
 import net.minecraft.world.item.Item;
@@ -18,6 +19,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> PORTABLE_CRAFTING_TABLE = ITEMS.register("portable_crafting_table",
         ()-> new PortableCraftingTableItem(new Item.Properties().stacksTo(1)));
+
+    public static final DeferredItem<Item> CARVING_KNIFE = ITEMS.register("carving_knife",
+            ()-> new CarvingKnifeItem(new Item.Properties().stacksTo(1).durability(128)));
 
     public static final DeferredItem<Item> QUANTUM_ACCELERATOR= ITEMS.register("quantum_accelerator",
             ()-> new QuantumAcceleratorItem(new Item.Properties().stacksTo(1).durability(2048)));

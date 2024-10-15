@@ -1,0 +1,26 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "temporang:item/stone_boomerang"
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [-60, 90, 0],
+      "translation": [0, 3, 3]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [-60, -90, 0],
+      "translation": [0, 3, 3]
+    },
+    "firstperson_righthand": {
+      "rotation": [-70, 90, 0]
+    },
+    "firstperson_lefthand": {
+      "rotation": [-70, -90, 0]
+    },
+    "head": {
+      "scale": [4, 4, 4]
+    }
+  }
+}

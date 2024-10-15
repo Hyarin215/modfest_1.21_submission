@@ -1,7 +1,10 @@
 {
   "itemGroup.temporang": "Temporang Tab",
+
   "item.temporang.stone_boomerang": "Stone Aged Boomerang",
   "item.temporang.portable_crafting_table": "Portable Crafting Table",
+  "item.temporang.carving_knife": "Carving Knife",
+
 
   "temporang.misc.crafting": "Portable Crafting Table"
 }

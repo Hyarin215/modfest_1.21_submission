@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "west": "temporang:block/block_comparator/front_off",
+    "east": "temporang:block/block_comparator/front_off",
+
+    "north": "temporang:block/block_comparator/eye",
+    "south": "temporang:block/block_comparator/eye",
+
+    "up": "temporang:block/block_comparator/front_off",
+    "down": "temporang:block/block_comparator/front_off",
+
+    "particle": "temporang:block/block_comparator/side"
+  }
+}

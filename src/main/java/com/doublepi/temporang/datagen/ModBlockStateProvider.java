@@ -1,6 +1,7 @@
 package com.doublepi.temporang.datagen;
 
 import com.doublepi.temporang.TemporangMod;
+import com.doublepi.temporang.blocks.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;

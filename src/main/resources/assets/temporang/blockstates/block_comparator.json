@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "axis=x,powered=false": {
+      "model": "temporang:block/block_comparator/x_off"
+    },
+    "axis=y,powered=false": {
+      "model": "temporang:block/block_comparator/y_off"
+    },
+    "axis=z,powered=false": {
+      "model": "temporang:block/block_comparator/z_off"
+    },
+    "axis=x,powered=true": {
+      "model": "temporang:block/block_comparator/x_on"
+    },
+    "axis=y,powered=true": {
+      "model": "temporang:block/block_comparator/y_on"
+    },
+    "axis=z,powered=true": {
+      "model": "temporang:block/block_comparator/z_on"
+    }
+  }
+}
