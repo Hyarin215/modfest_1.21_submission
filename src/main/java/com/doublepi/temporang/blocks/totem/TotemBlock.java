@@ -1,11 +1,8 @@
-package com.doublepi.temporang.blocks;
+package com.doublepi.temporang.blocks.totem;
 
-import com.doublepi.temporang.TemporangMod;
-import com.doublepi.temporang.blocks.block_entities.TotemBlockEntity;
+import com.doublepi.temporang.blocks.ModBlockEntities;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;

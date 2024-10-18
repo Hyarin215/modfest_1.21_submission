@@ -1,9 +1,18 @@
 {
   "itemGroup.temporang": "Temporang Tab",
 
-  "item.temporang.stone_boomerang": "Stone Aged Boomerang",
-  "item.temporang.portable_crafting_table": "Portable Crafting Table",
-  "item.temporang.carving_knife": "Carving Knife",
+  "item.temporang.stone_boomerang": "[STONE] Boomerang",
+  "item.temporang.iron_boomerang": "[IRON] Boomerang",
+  "item.temporang.industrial_boomerang": "[INDS] Boomerang",
+  "item.temporang.informational_boomerang": "[INFO] Boomerang",
+  "item.temporang.portable_crafting_table": "[STONE] Portable Crafting Table",
+  "item.temporang.carving_knife": "[STONE] Carving Knife",
+  "item.temporang.quantum_accelerator": "[INFO] Quantum Accelerator",
+  "item.temporang.time_fragment": "Time Fragment",
+
+  "block.temporang.totem": "[STONE] Totem",
+  "block.temporang.temporal_portal": "Temporal Portal",
+  "block.temporang.block_comparator": "[INDS] Block Comparator",
 
 
   "temporang.misc.crafting": "Portable Crafting Table"

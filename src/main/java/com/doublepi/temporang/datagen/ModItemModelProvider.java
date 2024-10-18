@@ -11,6 +11,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     }
     @Override
     protected void registerModels() {
+        basicItem(ModItems.TIME_FRAGMENT.get());
 
     }
 }

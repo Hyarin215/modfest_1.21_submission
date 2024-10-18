@@ -1,6 +1,7 @@
 package com.doublepi.temporang.blocks;
 
 import com.doublepi.temporang.TemporangMod;
+import com.doublepi.temporang.blocks.totem.TotemBlock;
 import com.doublepi.temporang.items.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;

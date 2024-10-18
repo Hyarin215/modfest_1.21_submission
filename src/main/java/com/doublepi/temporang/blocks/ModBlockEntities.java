@@ -1,7 +1,7 @@
 package com.doublepi.temporang.blocks;
 
 import com.doublepi.temporang.TemporangMod;
-import com.doublepi.temporang.blocks.block_entities.TotemBlockEntity;
+import com.doublepi.temporang.blocks.totem.TotemBlockEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;

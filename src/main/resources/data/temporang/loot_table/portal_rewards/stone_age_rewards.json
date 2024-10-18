@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "temporang:portable_crafting_table",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "temporang:carving_knife",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bundle",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "temporang:time_fragment",
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "random_sequence": "temporang:blocks/temporal_portal"
+}

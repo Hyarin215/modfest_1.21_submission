@@ -10,6 +10,6 @@
     "up": "temporang:block/block_comparator/eye",
     "down": "temporang:block/block_comparator/eye",
 
-    "particle": "temporang:block/block_comparator/side"
+    "particle": "temporang:block/block_comparator/front_off"
   }
 }
