@@ -1,5 +1,6 @@
-package com.doublepi.temporang.entities;
+package com.doublepi.temporang.utils;
 
+import com.doublepi.temporang.entities.ModEntities;
 import com.doublepi.temporang.TemporangMod;
 import com.doublepi.temporang.entities.temporal_portal.TemporalPortalEntity;
 import com.doublepi.temporang.entities.temporal_portal.TemporalPortalModel;

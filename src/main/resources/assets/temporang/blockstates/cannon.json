@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "temporang:block/cannon",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "temporang:block/cannon"
+    },
+    "facing=south": {
+      "model": "temporang:block/cannon",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "temporang:block/cannon",
+      "y": 270
+    }
+  }
+}

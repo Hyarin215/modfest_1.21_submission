@@ -35,10 +35,12 @@ public class ModTabs {
 
                 //iron age
                 output.accept(ModItems.IRON_BOOMERANG.get());
+                output.accept(ModBlocks.CANNON.get());
 
                 //industrial age
                 output.accept(ModItems.INDUSTRIAL_BOOMERANG.get());
                 output.accept(ModBlocks.BLOCK_COMPARATOR.get());
+                output.accept(ModBlocks.DRILL.get());
 
                 //information age
                 output.accept(ModItems.INFORMATIONAL_BOOMERANG.get());

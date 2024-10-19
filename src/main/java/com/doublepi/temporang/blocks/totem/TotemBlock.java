@@ -37,7 +37,7 @@ public class TotemBlock extends BaseEntityBlock {
 
     @Override
     protected RenderShape getRenderShape(BlockState pState) {
-        return RenderShape.MODEL;
+        return RenderShape.ENTITYBLOCK_ANIMATED;
     }
 
     @Nullable

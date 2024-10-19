@@ -1,6 +1,10 @@
 package com.doublepi.temporang.blocks;
 
 import com.doublepi.temporang.TemporangMod;
+import com.doublepi.temporang.blocks.cannon.CannonBlock;
+import com.doublepi.temporang.blocks.others.AbstractTemporalPortalBlock;
+import com.doublepi.temporang.blocks.others.BlockComparator;
+import com.doublepi.temporang.blocks.others.DrillBlock;
 import com.doublepi.temporang.blocks.totem.TotemBlock;
 import com.doublepi.temporang.items.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -22,6 +26,15 @@ public class ModBlocks {
             ()-> new BlockComparator(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
+    public static final String CANNON_NAME = "cannon";
+    public static final DeferredBlock<Block> CANNON = registerBlock(CANNON_NAME,
+            ()-> new CannonBlock(BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+    public static final DeferredBlock<Block> DRILL = registerBlock("redstone_drill",
+            ()-> new DrillBlock(BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
     public static final DeferredBlock<Block> TOTEM = registerBlock("totem",
             ()-> new TotemBlock(BlockBehaviour.Properties.of()
                     .strength(4f).sound(SoundType.WOOD)));
@@ -37,6 +50,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> TEMPORAL_PORTAL_BOTTOM = registerBlock("temporal_portal_bottom",
             ()-> new AbstractTemporalPortalBlock(BlockBehaviour.Properties.of().pushReaction(PushReaction.BLOCK)
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.ANCIENT_DEBRIS),-1));
+
 
 
 

@@ -3,12 +3,10 @@ package com.doublepi.temporang;
 import com.doublepi.temporang.blocks.ModBlockEntities;
 import com.doublepi.temporang.blocks.ModBlocks;
 import com.doublepi.temporang.entities.ModEntities;
-import com.doublepi.temporang.entities.ModEntityRenderers;
-import com.doublepi.temporang.entities.temporal_portal.TemporalPortalRenderer;
+import com.doublepi.temporang.utils.ModRenderers;
 import com.doublepi.temporang.items.ModItems;
 import com.doublepi.temporang.items.ModTabs;
-import com.doublepi.temporang.utils.data_components.ModDataComponentTypes;
-import net.minecraft.client.renderer.entity.EntityRenderers;
+
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -44,8 +42,9 @@ public class TemporangMod
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-        ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         ModTabs.register(modEventBus);
         ModEntities.register(modEventBus);
         ModBlockEntities.register(modEventBus);
@@ -97,7 +96,7 @@ public class TemporangMod
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
-            ModEntityRenderers.register();
+            ModRenderers.register();
 
         }
     }

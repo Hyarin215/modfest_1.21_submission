@@ -1,4 +1,4 @@
-package com.doublepi.temporang.blocks;
+package com.doublepi.temporang.blocks.others;
 
 import com.doublepi.temporang.TemporangMod;
 import com.mojang.serialization.MapCodec;
@@ -15,7 +15,6 @@ import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.*;
-import net.minecraft.world.level.chunk.BlockColumn;
 
 public class BlockComparator extends RotatedPillarBlock {
     public static final BooleanProperty POWERED;
