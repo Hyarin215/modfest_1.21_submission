@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "temporang:industrial_boomerang"
+    },
+    "T": {
+      "item": "temporang:time_fragment"
+    }
+  },
+  "pattern": [
+    "TTT",
+    "TBT",
+    "TTT"
+  ],
+  "result": {
+    "count": 1,
+    "id": "temporang:informational_boomerang"
+  }
+}

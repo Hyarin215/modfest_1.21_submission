@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:redstone",
+          "count": 3,
+          "weight": 15
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:coal",
+          "count": 5,
+          "weight": 15
+        },
+        {
+          "type": "minecraft:item",
+          "name": "temporang:block_comparator",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "temporang:redstone_drill",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "temporang:time_fragment",
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "random_sequence": "temporang:blocks/temporal_portal"
+}

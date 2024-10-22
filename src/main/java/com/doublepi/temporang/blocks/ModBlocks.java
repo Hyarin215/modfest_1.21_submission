@@ -1,10 +1,10 @@
 package com.doublepi.temporang.blocks;
 
 import com.doublepi.temporang.TemporangMod;
-import com.doublepi.temporang.blocks.cannon.CannonBlock;
+import com.doublepi.temporang.blocks.others.CannonBlock;
 import com.doublepi.temporang.blocks.others.AbstractTemporalPortalBlock;
 import com.doublepi.temporang.blocks.others.BlockComparator;
-import com.doublepi.temporang.blocks.others.DrillBlock;
+import com.doublepi.temporang.blocks.drill.DrillBlock;
 import com.doublepi.temporang.blocks.totem.TotemBlock;
 import com.doublepi.temporang.items.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -29,11 +29,11 @@ public class ModBlocks {
     public static final String CANNON_NAME = "cannon";
     public static final DeferredBlock<Block> CANNON = registerBlock(CANNON_NAME,
             ()-> new CannonBlock(BlockBehaviour.Properties.of()
-                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
 
     public static final DeferredBlock<Block> DRILL = registerBlock("redstone_drill",
             ()-> new DrillBlock(BlockBehaviour.Properties.of()
-                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
 
     public static final DeferredBlock<Block> TOTEM = registerBlock("totem",
             ()-> new TotemBlock(BlockBehaviour.Properties.of()
@@ -41,15 +41,18 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> TEMPORAL_PORTAL_MIDDLE = registerBlock("temporal_portal",
             ()-> new AbstractTemporalPortalBlock(BlockBehaviour.Properties.of().pushReaction(PushReaction.BLOCK)
-                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.ANCIENT_DEBRIS),0));
+                    .strength(55.0F, 55.0F).noLootTable()
+                    .noOcclusion().sound(SoundType.ANCIENT_DEBRIS),0));
 
-    public static final DeferredBlock<Block> TEMPORAL_PORTAL_TOP = registerBlock("temporal_portal_top",
+    public static final DeferredBlock<Block> TEMPORAL_PORTAL_TOP = registerBlockNoItem("temporal_portal_top",
             ()-> new AbstractTemporalPortalBlock(BlockBehaviour.Properties.of().pushReaction(PushReaction.BLOCK)
-                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.ANCIENT_DEBRIS),1));
+                    .strength(55.0F, 55.0F).noLootTable()
+                    .noOcclusion().sound(SoundType.ANCIENT_DEBRIS),1));
 
-    public static final DeferredBlock<Block> TEMPORAL_PORTAL_BOTTOM = registerBlock("temporal_portal_bottom",
+    public static final DeferredBlock<Block> TEMPORAL_PORTAL_BOTTOM = registerBlockNoItem("temporal_portal_bottom",
             ()-> new AbstractTemporalPortalBlock(BlockBehaviour.Properties.of().pushReaction(PushReaction.BLOCK)
-                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.ANCIENT_DEBRIS),-1));
+                    .strength(55.0F, 55F).noLootTable()
+                    .noOcclusion().sound(SoundType.ANCIENT_DEBRIS),-1));
 
 
 
@@ -59,6 +62,12 @@ public class ModBlocks {
         registerBlockItem(name,toReturn);
         return toReturn;
     }
+
+    private static <T extends Block> DeferredBlock<T> registerBlockNoItem(String name, Supplier<T> block){
+        DeferredBlock<T> toReturn = BLOCKS.register(name,block);
+        return toReturn;
+    }
+
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block){
         ModItems.ITEMS.register(name, ()-> new BlockItem(block.get(), new Item.Properties()));
     }

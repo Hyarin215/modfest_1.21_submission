@@ -1,0 +1,50 @@
+{
+  "variants": {
+    "facing=down,powered=false": {
+      "model": "temporang:block/drill/off",
+      "x": 90
+    },
+    "facing=down,powered=true": {
+      "model": "temporang:block/drill/on",
+      "x": 90
+    },
+    "facing=east,powered=false": {
+      "model": "temporang:block/drill/off",
+      "y": 90
+    },
+    "facing=east,powered=true": {
+      "model": "temporang:block/drill/on",
+      "y": 90
+    },
+    "facing=north,powered=false": {
+      "model": "temporang:block/drill/off"
+    },
+    "facing=north,powered=true": {
+      "model": "temporang:block/drill/on"
+    },
+    "facing=south,powered=false": {
+      "model": "temporang:block/drill/off",
+      "y": 180
+    },
+    "facing=south,powered=true": {
+      "model": "temporang:block/drill/on",
+      "y": 180
+    },
+    "facing=up,powered=false": {
+      "model": "temporang:block/drill/off",
+      "x": 270
+    },
+    "facing=up,powered=true": {
+      "model": "temporang:block/drill/on",
+      "x": 270
+    },
+    "facing=west,powered=false": {
+      "model": "temporang:block/drill/off",
+      "y": 270
+    },
+    "facing=west,powered=true": {
+      "model": "temporang:block/drill/on",
+      "y": 270
+    }
+  }
+}

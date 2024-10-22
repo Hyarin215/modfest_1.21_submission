@@ -34,6 +34,10 @@ public class ModItems {
     public static final DeferredItem<Item> CARVING_KNIFE = ITEMS.register("carving_knife",
             ()-> new CarvingKnifeItem(new Item.Properties().stacksTo(1).durability(128)));
 
+    //Iron Age Rewards
+    public static final DeferredItem<Item> CANNON_BALL = ITEMS.register("cannon_ball",
+            ()-> new Item(new Item.Properties()));
+
 
     public static final DeferredItem<Item> TIME_FRAGMENT = ITEMS.register("time_fragment",
             ()-> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE,true)));

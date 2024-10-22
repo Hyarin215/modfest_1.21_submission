@@ -1,5 +1,7 @@
 {
   "values": [
-    "temporang:block_comparator"
+    "temporang:block_comparator",
+    "temporang:redstone_drill",
+    "temporang:cannon"
   ]
 }

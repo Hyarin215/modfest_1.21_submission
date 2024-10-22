@@ -26,9 +26,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         protected void generate() {
             dropSelf(ModBlocks.BLOCK_COMPARATOR.get());
             dropWhenSilkTouch(ModBlocks.TOTEM.get());
-            this.add(ModBlocks.TEMPORAL_PORTAL_MIDDLE.get(), block->noDrop());
-            this.add(ModBlocks.TEMPORAL_PORTAL_TOP.get(), block->noDrop());
-            this.add(ModBlocks.TEMPORAL_PORTAL_BOTTOM.get(), block->noDrop());
+            dropSelf(ModBlocks.CANNON.get());
+            dropSelf(ModBlocks.DRILL.get());
+//            this.add(ModBlocks.TEMPORAL_PORTAL_MIDDLE.get(), block->noDrop());
+//            this.add(ModBlocks.TEMPORAL_PORTAL_TOP.get(), block->noDrop());
+//            this.add(ModBlocks.TEMPORAL_PORTAL_BOTTOM.get(), block->noDrop());
 //            this.add(ModBlocks.BLACK_OPAL_ORE.get(),
 //                    block -> createOreDrop(ModBlocks.BLACK_OPAL_ORE.get(), ModItems.RAW_BLACK_OPAL.get()));
 //            this.add(ModBlocks.BLACK_OPAL_DEEPSLATE_ORE.get(),

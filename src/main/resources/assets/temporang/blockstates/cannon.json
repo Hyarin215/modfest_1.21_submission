@@ -1,18 +1,66 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "temporang:block/cannon",
+    "facing=east,aim=0": {
+      "model": "temporang:block/cannon/aim0",
       "y": 90
     },
-    "facing=north": {
-      "model": "temporang:block/cannon"
+    "facing=north,aim=0": {
+      "model": "temporang:block/cannon/aim0"
     },
-    "facing=south": {
-      "model": "temporang:block/cannon",
+    "facing=south,aim=0": {
+      "model": "temporang:block/cannon/aim0",
       "y": 180
     },
-    "facing=west": {
-      "model": "temporang:block/cannon",
+    "facing=west,aim=0": {
+      "model": "temporang:block/cannon/aim0",
+      "y": 270
+    },
+
+    "facing=east,aim=1": {
+      "model": "temporang:block/cannon/aim1",
+      "y": 90
+    },
+    "facing=north,aim=1": {
+      "model": "temporang:block/cannon/aim1"
+    },
+    "facing=south,aim=1": {
+      "model": "temporang:block/cannon/aim1",
+      "y": 180
+    },
+    "facing=west,aim=1": {
+      "model": "temporang:block/cannon/aim1",
+      "y": 270
+    },
+
+    "facing=east,aim=2": {
+      "model": "temporang:block/cannon/aim2",
+      "y": 90
+    },
+    "facing=north,aim=2": {
+      "model": "temporang:block/cannon/aim2"
+    },
+    "facing=south,aim=2": {
+      "model": "temporang:block/cannon/aim2",
+      "y": 180
+    },
+    "facing=west,aim=2": {
+      "model": "temporang:block/cannon/aim2",
+      "y": 270
+    },
+
+    "facing=east,aim=3": {
+      "model": "temporang:block/cannon/aim3",
+      "y": 90
+    },
+    "facing=north,aim=3": {
+      "model": "temporang:block/cannon/aim3"
+    },
+    "facing=south,aim=3": {
+      "model": "temporang:block/cannon/aim3",
+      "y": 180
+    },
+    "facing=west,aim=3": {
+      "model": "temporang:block/cannon/aim3",
       "y": 270
     }
   }

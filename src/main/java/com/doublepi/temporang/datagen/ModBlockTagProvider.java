@@ -22,5 +22,13 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BLOCK_COMPARATOR.get());
         this.tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.BLOCK_COMPARATOR.get());
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(ModBlocks.DRILL.get());
+        this.tag(BlockTags.NEEDS_STONE_TOOL)
+                .add(ModBlocks.DRILL.get());
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(ModBlocks.CANNON.get());
+        this.tag(BlockTags.NEEDS_STONE_TOOL)
+                .add(ModBlocks.CANNON.get());
     }
 }

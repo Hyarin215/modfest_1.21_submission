@@ -1,0 +1,23 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [128, 128],
+	"textures": {
+		"0": "temporang:block/temporal_portal/middle",
+		"particle": "temporang:block/temporal_portal/middle"
+	},
+	"elements": [
+		{
+			"from": [2, 0, 2],
+			"to": [14, 16, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, -16, 0]},
+			"faces": {
+				"north": {"uv": [0, 1.125, 1.5, 3.125], "texture": "#0"},
+				"east": {"uv": [0, 1.125, 1.5, 3.125], "texture": "#0"},
+				"south": {"uv": [0, 1.125, 1.5, 3.125], "texture": "#0"},
+				"west": {"uv": [0, 1.125, 1.5, 3.125], "texture": "#0"},
+				"up": {"uv": [5.25, 6, 3.75, 4.5], "texture": "#0"},
+				"down": {"uv": [5.25, 4.5, 3.75, 6], "texture": "#0"}
+			}
+		}
+	]
+}

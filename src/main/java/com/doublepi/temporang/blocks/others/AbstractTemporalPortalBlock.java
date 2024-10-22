@@ -70,6 +70,10 @@ public class AbstractTemporalPortalBlock extends Block {
             return ItemInteractionResult.FAIL;
 
         List<ItemStack> reward = null;
+
+        if(player.getCooldowns().isOnCooldown(stack.getItem()))
+            return ItemInteractionResult.FAIL;
+
         if(stack.is(ModItems.STONE_BOOMERANG))
             reward = generateReward(level, state, pos, player, ModLootTables.STONE_AGE_REWARDS);
         if(stack.is(ModItems.IRON_BOOMERANG))

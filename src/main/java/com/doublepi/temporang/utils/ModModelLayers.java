@@ -13,6 +13,9 @@ public class ModModelLayers {
     public static final ModelLayerLocation TEMPORAL_PORTAL = new ModelLayerLocation(
             ResourceLocation.fromNamespaceAndPath(TemporangMod.MOD_ID, ModEntities.TEMPORAL_PORTAL_NAME), "main");
 
+//    public static final ModelLayerLocation CANNON_BALL = new ModelLayerLocation(
+//            ResourceLocation.fromNamespaceAndPath(TemporangMod.MOD_ID, ModEntities.CANNON_BALL_NAME), "main");
+
     public static final ModelLayerLocation CANNON = new ModelLayerLocation(
             ResourceLocation.fromNamespaceAndPath(TemporangMod.MOD_ID, ModBlocks.CANNON_NAME), "main");
 }
