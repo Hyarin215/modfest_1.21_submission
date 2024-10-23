@@ -38,6 +38,13 @@ public class ModItems {
     public static final DeferredItem<Item> CANNON_BALL = ITEMS.register("cannon_ball",
             ()-> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> COPPER_DUST = ITEMS.register("copper_dust",
+            ()-> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> IRON_DUST = ITEMS.register("iron_dust",
+            ()-> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> GOLD_DUST = ITEMS.register("gold_dust",
+            ()-> new Item(new Item.Properties()));
+
 
     public static final DeferredItem<Item> TIME_FRAGMENT = ITEMS.register("time_fragment",
             ()-> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE,true)));

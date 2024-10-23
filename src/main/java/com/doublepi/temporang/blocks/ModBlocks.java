@@ -5,6 +5,7 @@ import com.doublepi.temporang.blocks.others.CannonBlock;
 import com.doublepi.temporang.blocks.others.AbstractTemporalPortalBlock;
 import com.doublepi.temporang.blocks.others.BlockComparator;
 import com.doublepi.temporang.blocks.drill.DrillBlock;
+import com.doublepi.temporang.blocks.refinery.RefineryBlock;
 import com.doublepi.temporang.blocks.totem.TotemBlock;
 import com.doublepi.temporang.items.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -26,18 +27,22 @@ public class ModBlocks {
             ()-> new BlockComparator(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final String CANNON_NAME = "cannon";
-    public static final DeferredBlock<Block> CANNON = registerBlock(CANNON_NAME,
+    public static final DeferredBlock<Block> CANNON = registerBlock("cannon",
             ()-> new CannonBlock(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
 
     public static final DeferredBlock<Block> DRILL = registerBlock("redstone_drill",
             ()-> new DrillBlock(BlockBehaviour.Properties.of()
-                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.WOOD).noOcclusion()));
+
+    public static final DeferredBlock<Block> REFINERY = registerBlock("refinery",
+            ()-> new RefineryBlock(BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
     public static final DeferredBlock<Block> TOTEM = registerBlock("totem",
             ()-> new TotemBlock(BlockBehaviour.Properties.of()
                     .strength(4f).sound(SoundType.WOOD)));
+
 
     public static final DeferredBlock<Block> TEMPORAL_PORTAL_MIDDLE = registerBlock("temporal_portal",
             ()-> new AbstractTemporalPortalBlock(BlockBehaviour.Properties.of().pushReaction(PushReaction.BLOCK)

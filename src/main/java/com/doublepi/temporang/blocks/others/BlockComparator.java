@@ -34,12 +34,6 @@ public class BlockComparator extends RotatedPillarBlock {
         return state.getValue(POWERED)? 15:0;
     }
 
-    @Override
-    protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-        super.tick(state, level, pos, random);
-        TemporangMod.LOGGER.error("sss");
-    }
-
     public BlockComparator(Properties properties) {
         super(properties);
         this.registerDefaultState(this.defaultBlockState().setValue(POWERED, false));
@@ -48,9 +42,9 @@ public class BlockComparator extends RotatedPillarBlock {
     @Override
     protected void neighborChanged(BlockState state, Level level, BlockPos pos, Block neighborBlock, BlockPos neighborPos, boolean movedByPiston) {
         super.neighborChanged(state, level, pos, neighborBlock, neighborPos, movedByPiston);
-        TemporangMod.LOGGER.error("whhyy!");
         if(level.isClientSide())
             return;
+
         Axis axis = state.getValue(AXIS);
 
         Vec3i sidedOffset = switch (axis) {
@@ -60,15 +54,12 @@ public class BlockComparator extends RotatedPillarBlock {
             default -> throw new IllegalStateException("Unexpected value!: " + this.AXIS);
         };
 
-
         Block side1 = level.getBlockState(pos.offset(sidedOffset)).getBlock();
         Block side2 = level.getBlockState(pos.subtract(sidedOffset)).getBlock();
-        TemporangMod.LOGGER.error("!Side 1: "+side1.getName().toString()+", Side 2: "+side2.getName());
-        if(side1.equals(side2)){
-            TemporangMod.LOGGER.error("!Do");
-            state.setValue(POWERED,true);
+        if(side1.equals(side2)) {
+            level.setBlockAndUpdate(pos, state.setValue(POWERED, true));
         }else{
-            state.setValue(POWERED,false);
+            level.setBlockAndUpdate(pos, state.setValue(POWERED, false));
         }
     }
 

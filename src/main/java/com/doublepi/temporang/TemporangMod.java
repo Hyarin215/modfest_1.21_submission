@@ -7,6 +7,7 @@ import com.doublepi.temporang.utils.ModRenderers;
 import com.doublepi.temporang.items.ModItems;
 import com.doublepi.temporang.items.ModTabs;
 
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -48,6 +49,7 @@ public class TemporangMod
         ModTabs.register(modEventBus);
         ModEntities.register(modEventBus);
         ModBlockEntities.register(modEventBus);
+        //ModMenuTypes.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (temporang) to respond directly to events.
@@ -98,6 +100,11 @@ public class TemporangMod
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
             ModRenderers.register();
 
+        }
+
+        @SubscribeEvent
+        public static void registerScreens(RegisterMenuScreensEvent event) {
+            //event.register(ModMenuTypes.PEDESTAL_MENU.get(), PedestalScreen::new);
         }
     }
 }

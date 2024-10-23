@@ -18,7 +18,7 @@ public class ModTabs {
 
     // Creates a creative tab with the id "temporang:example_tab" for the example item, that is placed after the combat tab
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB
-            = MOD_TABS.register("example_tab", () -> CreativeModeTab.builder()
+            = MOD_TABS.register("temporang_tab", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.temporang")) //The language key for the title of your CreativeModeTab
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> ModItems.TIME_FRAGMENT.get().getDefaultInstance())
@@ -29,13 +29,14 @@ public class ModTabs {
 
                 //stone age
                 output.accept(ModItems.STONE_BOOMERANG.get());
-                output.accept(ModBlocks.TOTEM.get());
                 output.accept(ModItems.PORTABLE_CRAFTING_TABLE.get());
                 output.accept(ModItems.CARVING_KNIFE.get());
+                output.accept(ModBlocks.TOTEM.get());
 
                 //iron age
                 output.accept(ModItems.IRON_BOOMERANG.get());
                 output.accept(ModBlocks.CANNON.get());
+                output.accept(ModBlocks.REFINERY.get());
 
                 //industrial age
                 output.accept(ModItems.INDUSTRIAL_BOOMERANG.get());

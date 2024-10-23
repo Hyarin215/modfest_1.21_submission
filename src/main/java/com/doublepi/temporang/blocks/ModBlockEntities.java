@@ -2,6 +2,7 @@ package com.doublepi.temporang.blocks;
 
 import com.doublepi.temporang.TemporangMod;
 import com.doublepi.temporang.blocks.drill.DrillBlockEntity;
+import com.doublepi.temporang.blocks.refinery.RefineryBlockEntity;
 import com.doublepi.temporang.blocks.totem.TotemBlockEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -22,6 +23,11 @@ public class ModBlockEntities {
     public static final Supplier<BlockEntityType<DrillBlockEntity>> DRILL_BE =
             BLOCK_ENTITIES.register("drill_be", () -> BlockEntityType.Builder.of(
                     DrillBlockEntity::new, ModBlocks.DRILL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<RefineryBlockEntity>> REFINERY_BE =
+            BLOCK_ENTITIES.register("refinery_be", () -> BlockEntityType.Builder.of(
+                    RefineryBlockEntity::new, ModBlocks.REFINERY.get()).build(null));
+
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

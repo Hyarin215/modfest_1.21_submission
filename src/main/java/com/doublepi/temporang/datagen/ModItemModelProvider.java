@@ -13,5 +13,6 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.TIME_FRAGMENT.get());
         basicItem(ModItems.CANNON_BALL.get());
+        basicItem(ModItems.QUANTUM_ACCELERATOR.get());
     }
 }

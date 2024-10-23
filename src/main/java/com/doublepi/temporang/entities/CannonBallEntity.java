@@ -10,6 +10,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Optional;
 
@@ -18,16 +19,9 @@ public class CannonBallEntity extends ThrowableItemProjectile {
         super(entityType, level);
     }
 
-    public CannonBallEntity(Level world, LivingEntity owner) {
-        super(ModEntities.CANNON_BALL_ENTITY.get(), owner, world); // null will be changed later
-    }
-
     public CannonBallEntity(Level world, double x, double y, double z) {
-        super(ModEntities.CANNON_BALL_ENTITY.get(), x, y, z, world); // null will be changed later
+        super(ModEntities.CANNON_BALL_ENTITY.get(), x, y, z, world);
     }
-
-
-
 
     protected void onHitEntity(EntityHitResult result) {
         super.onHitEntity(result);
@@ -45,7 +39,7 @@ public class CannonBallEntity extends ThrowableItemProjectile {
 
 
     @Override
-    protected Item getDefaultItem() {
+    protected @NotNull Item getDefaultItem() {
         return ModItems.CANNON_BALL.get();
     }
 }

@@ -23,6 +23,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.BlockHitResult;
@@ -33,20 +34,21 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 public class CannonBlock extends Block {
     public static final DirectionProperty FACING;
     public static final IntegerProperty AIM;
+    public static final BooleanProperty CAN_SHOOT;
 
     public static final int AIM_RANGE = 3;
-    private boolean canShoot=true;
+
     protected static final VoxelShape COLLISION_BOX = Block.box(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
 
     public CannonBlock(Properties properties) {
         super(properties);
-        registerDefaultState(this.defaultBlockState().setValue(AIM,0));
+        registerDefaultState(this.defaultBlockState().setValue(AIM,0).setValue(CAN_SHOOT,true));
     }
 
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        int offset = player.isShiftKeyDown()? 1:-1;
+        int offset = player.isCrouching()? 1:-1;
         int currentAim = state.getValue(AIM);
         if(currentAim+offset> AIM_RANGE)
             return InteractionResult.FAIL;
@@ -60,10 +62,10 @@ public class CannonBlock extends Block {
 
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
-        if(!canShoot)
-            return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+        if(!state.getValue(CAN_SHOOT))
+            return ItemInteractionResult.SUCCESS;
         if(stack.is(Items.FLINT_AND_STEEL)){
-            double angle = 0.3926991*state.getValue(AIM);
+            double angle = 0.3926991*state.getValue(AIM); //22*pi/180
             int x = state.getValue(FACING).getNormal().getX();
             int z = state.getValue(FACING).getNormal().getZ();
 
@@ -77,9 +79,9 @@ public class CannonBlock extends Block {
             cannonBall.addDeltaMovement(deltaMovement);
 
             level.addFreshEntity(cannonBall);
-            stack.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
-            canShoot=false;
-            level.scheduleTick(pos,state.getBlock(),10);
+            stack.hurtAndBreak(5, player, EquipmentSlot.MAINHAND);
+            level.setBlockAndUpdate(pos, state.setValue(CAN_SHOOT,false));
+            level.scheduleTick(pos,state.getBlock(),50);
             return ItemInteractionResult.SUCCESS;
         }
         return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
@@ -89,7 +91,7 @@ public class CannonBlock extends Block {
 
     @Override
     protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-        canShoot=true;
+        level.setBlockAndUpdate(pos, state.setValue(CAN_SHOOT,true));
     }
 
     @Override
@@ -106,27 +108,30 @@ public class CannonBlock extends Block {
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING);
         builder.add(AIM);
+        builder.add(CAN_SHOOT);
     }
 
     @Override
     public BlockState rotate(BlockState state, LevelAccessor level, BlockPos pos, Rotation direction) {
-        return (BlockState)state.setValue(FACING, direction.rotate((Direction)state.getValue(FACING)));
+        return state.setValue(FACING, direction.rotate(state.getValue(FACING)));
     }
 
     @Override
     protected BlockState mirror(BlockState state, Mirror mirror) {
-        return state.rotate(mirror.getRotation((Direction)state.getValue(FACING)));
+        return state.rotate(mirror.getRotation(state.getValue(FACING)));
     }
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return (BlockState)this.defaultBlockState()
+        return this.defaultBlockState()
                 .setValue(FACING, context.getHorizontalDirection())
-                .setValue(AIM,0);
+                .setValue(AIM,0)
+                .setValue(CAN_SHOOT,true);
     }
 
     static {
         FACING = BlockStateProperties.FACING;
         AIM = IntegerProperty.create("aim",0, AIM_RANGE);
+        CAN_SHOOT = BooleanProperty.create("can_shoot");
     }
 }

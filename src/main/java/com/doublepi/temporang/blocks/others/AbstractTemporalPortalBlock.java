@@ -6,7 +6,10 @@ import com.doublepi.temporang.utils.ModLootTables;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -66,7 +69,7 @@ public class AbstractTemporalPortalBlock extends Block {
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
 
-        if(level.isClientSide() || hand == InteractionHand.OFF_HAND)
+        if(level.isClientSide())
             return ItemInteractionResult.FAIL;
 
         List<ItemStack> reward = null;
@@ -77,11 +80,11 @@ public class AbstractTemporalPortalBlock extends Block {
         if(stack.is(ModItems.STONE_BOOMERANG))
             reward = generateReward(level, state, pos, player, ModLootTables.STONE_AGE_REWARDS);
         if(stack.is(ModItems.IRON_BOOMERANG))
-            reward = generateReward(level, state, pos, player, ModLootTables.STONE_AGE_REWARDS);
+            reward = generateReward(level, state, pos, player, ModLootTables.IRON_AGE_REWARDS);
         if(stack.is(ModItems.INDUSTRIAL_BOOMERANG))
-            reward = generateReward(level, state, pos, player, ModLootTables.STONE_AGE_REWARDS);
+            reward = generateReward(level, state, pos, player, ModLootTables.INDUSTRIAL_AGE_REWARDS);
         if(stack.is(ModItems.INFORMATIONAL_BOOMERANG))
-            reward = generateReward(level, state, pos, player, ModLootTables.STONE_AGE_REWARDS);
+            reward = generateReward(level, state, pos, player, ModLootTables.INFORMATION_AGE_REWARDS);
 
         if(reward==null)
             return ItemInteractionResult.FAIL;
@@ -90,7 +93,9 @@ public class AbstractTemporalPortalBlock extends Block {
             player.addItem(itemStack);
         }
 
-        stack.hurtAndBreak(1,player, EquipmentSlot.MAINHAND);
+        level.playLocalSound(pos, SoundEvents.PORTAL_TRAVEL, SoundSource.BLOCKS, 1,1,false);
+        EquipmentSlot equipmentSlot = (hand == InteractionHand.MAIN_HAND) ? EquipmentSlot.MAINHAND:EquipmentSlot.OFFHAND;
+        stack.hurtAndBreak(1,player, equipmentSlot);
         player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
         player.getCooldowns().addCooldown(stack.getItem(), 20);
 
@@ -101,7 +106,8 @@ public class AbstractTemporalPortalBlock extends Block {
     private List<ItemStack> generateReward(Level level, BlockState state, BlockPos pos, Player player, ResourceKey<LootTable> resourceKey){
         LootTable lootTable = level.getServer().reloadableRegistries().getLootTable(resourceKey);
 
-        LootParams lootparams = (new LootParams.Builder((ServerLevel) level)).withParameter(LootContextParams.BLOCK_STATE, state)
+        LootParams lootparams = (new LootParams.Builder((ServerLevel) level))
+                .withParameter(LootContextParams.BLOCK_STATE, state)
                 .withParameter(LootContextParams.ORIGIN, Vec3.atCenterOf(pos))
                 .withParameter(LootContextParams.THIS_ENTITY, player)
                 .create(LootContextParamSets.BLOCK_USE);
