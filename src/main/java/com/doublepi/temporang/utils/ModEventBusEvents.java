@@ -1,6 +1,5 @@
 package com.doublepi.temporang.utils;
 
-import com.doublepi.temporang.entities.ModEntities;
 import com.doublepi.temporang.TemporangMod;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -12,6 +11,7 @@ public class ModEventBusEvents {
 
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        //event.registerLayerDefinition(ModRenderers.SCANNER_MODEL, ScannerRenderer::createBodyLayer);
     }
 
     @SubscribeEvent

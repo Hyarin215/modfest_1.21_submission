@@ -1,7 +1,7 @@
 package com.doublepi.temporang.datagen;
 
 import com.doublepi.temporang.TemporangMod;
-import com.doublepi.temporang.items.ModItems;
+import com.doublepi.temporang.in_game.items.ModItems;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;

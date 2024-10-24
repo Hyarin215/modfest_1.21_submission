@@ -2,7 +2,7 @@ package com.doublepi.temporang.datagen;
 
 
 import com.doublepi.temporang.TemporangMod;
-import com.doublepi.temporang.items.ModItems;
+import com.doublepi.temporang.in_game.items.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;

@@ -11,12 +11,13 @@
   "item.temporang.time_fragment": "Time Fragment",
 
   "block.temporang.totem": "Totem",
-  "block.temporang.temporal_portal": "Temporal Portal",
-  "block.temporang.temporal_portal_top": "Temporal Portal",
-  "block.temporang.temporal_portal_bottom": "Temporal Portal",
+  "block.temporang.temporal_portal": "Temporal Obelisk",
+  "block.temporang.temporal_portal_top": "Temporal Obelisk",
+  "block.temporang.temporal_portal_bottom": "Temporal Obelisk",
   "block.temporang.block_comparator": "Block Comparator",
   "block.temporang.cannon": "Cannon",
   "block.temporang.redstone_drill": "Redstone Drill",
+  "block.temporang.scanner": "Mob Scanner",
 
   "entity.temporang.cannon_ball": "Cannon Ball",
 

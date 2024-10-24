@@ -6,10 +6,6 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.storage.loot.LootTable;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
-
 public class ModLootTables {
 
 

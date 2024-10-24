@@ -2,7 +2,7 @@ package com.doublepi.temporang.datagen;
 
 
 import com.doublepi.temporang.TemporangMod;
-import com.doublepi.temporang.blocks.ModBlocks;
+import com.doublepi.temporang.in_game.blocks.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;

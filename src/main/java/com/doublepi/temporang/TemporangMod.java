@@ -1,12 +1,13 @@
 package com.doublepi.temporang;
 
-import com.doublepi.temporang.blocks.ModBlockEntities;
-import com.doublepi.temporang.blocks.ModBlocks;
-import com.doublepi.temporang.entities.ModEntities;
+import com.doublepi.temporang.in_game.blocks.ModBlockEntities;
+import com.doublepi.temporang.in_game.blocks.ModBlocks;
+import com.doublepi.temporang.in_game.entities.ModEntities;
 import com.doublepi.temporang.utils.ModRenderers;
-import com.doublepi.temporang.items.ModItems;
-import com.doublepi.temporang.items.ModTabs;
+import com.doublepi.temporang.in_game.items.ModItems;
+import com.doublepi.temporang.in_game.items.ModTabs;
 
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import org.slf4j.Logger;
 
@@ -98,8 +99,13 @@ public class TemporangMod
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
-            ModRenderers.register();
 
+
+        }
+
+        @SubscribeEvent
+        public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
+            ModRenderers.register(event);
         }
 
         @SubscribeEvent
