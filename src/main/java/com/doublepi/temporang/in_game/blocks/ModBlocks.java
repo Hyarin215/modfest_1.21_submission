@@ -42,7 +42,7 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> TOTEM = registerBlock("totem",
             ()-> new TotemBlock(BlockBehaviour.Properties.of()
-                    .strength(4f).sound(SoundType.WOOD)));
+                    .strength(4f).sound(SoundType.WOOD).ignitedByLava()));
 
     public static final DeferredBlock<Block> SCANNER = registerBlock("scanner",
             ()-> new ScannerBlock(BlockBehaviour.Properties.of()

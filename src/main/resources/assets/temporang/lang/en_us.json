@@ -7,7 +7,6 @@
   "item.temporang.informational_boomerang": "Digital Boomerang",
   "item.temporang.portable_crafting_table": "Portable Crafting Table",
   "item.temporang.carving_knife": "Carving Knife",
-  "item.temporang.quantum_accelerator": "Quantum Accelerator",
   "item.temporang.time_fragment": "Time Fragment",
 
   "block.temporang.totem": "Totem",
@@ -18,9 +17,11 @@
   "block.temporang.cannon": "Cannon",
   "block.temporang.redstone_drill": "Redstone Drill",
   "block.temporang.scanner": "Mob Scanner",
+  "block.temporang.refinery": "Refinery",
 
   "entity.temporang.cannon_ball": "Cannon Ball",
 
   "temporang.misc.crafting": "Portable Crafting Table",
-  "temporang.misc.refinery": "Refinery"
+  "temporang.misc.refinery": "Refinery",
+  "temporang.misc.refinery.refinable": "Showing Refinable"
 }

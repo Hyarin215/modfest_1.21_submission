@@ -45,7 +45,6 @@ public class ModTabs {
 
                 //information age
                 output.accept(ModItems.INFORMATIONAL_BOOMERANG.get());
-                output.accept(ModItems.QUANTUM_ACCELERATOR.get());
                 output.accept(ModBlocks.SCANNER.get());
 
             }).build());

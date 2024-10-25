@@ -1,0 +1,36 @@
+package com.doublepi.temporang.utils;
+
+import com.doublepi.temporang.TemporangMod;
+import com.doublepi.temporang.in_game.blocks.refinery.RefineryRecipe;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.world.item.crafting.*;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.function.Supplier;
+
+public class ModRecipeTypes {
+    public static final DeferredRegister<RecipeType<?>> RECIPE_TYPES =
+            DeferredRegister.create(Registries.RECIPE_TYPE, TemporangMod.MOD_ID);
+
+    public static final Supplier<RecipeType<RefineryRecipe>> REFINING
+            = RECIPE_TYPES.register("refining", ()-> registerRecipeType("refining"));
+
+    public static <T extends Recipe<?>> RecipeType<T> registerRecipeType(String identifier) {
+        return new RecipeType<>() {
+            @Override
+            public String toString() {
+                return TemporangMod.MOD_ID+":"+identifier;
+            }
+        };
+    }
+
+    public static void register(IEventBus event){
+        RECIPE_TYPES.register(event);
+    }
+
+
+
+
+
+}

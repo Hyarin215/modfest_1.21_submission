@@ -3,9 +3,9 @@ package com.doublepi.temporang.in_game.items;
 import com.doublepi.temporang.TemporangMod;
 import com.doublepi.temporang.in_game.items.rewards.CarvingKnifeItem;
 import com.doublepi.temporang.in_game.items.rewards.PortableCraftingTableItem;
-import com.doublepi.temporang.in_game.items.rewards.QuantumAcceleratorItem;
-import com.doublepi.temporang.in_game.items.rewards.XrayGooglesItem;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.world.food.Foods;
+import net.minecraft.world.item.ChorusFruitItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -48,15 +48,12 @@ public class ModItems {
             ()-> new Item(new Item.Properties()));
 
     //Digital Age Rewards
-    public static final DeferredItem<Item> XRAY_GOOGLES = ITEMS.register("xray_googles",
-            ()-> new XrayGooglesItem(new Item.Properties()));
+
 
 
     public static final DeferredItem<Item> TIME_FRAGMENT = ITEMS.register("time_fragment",
-            ()-> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE,true)));
+            ()-> new ChorusFruitItem(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE,true).food(Foods.CHORUS_FRUIT)));
 
-    public static final DeferredItem<Item> QUANTUM_ACCELERATOR= ITEMS.register("quantum_accelerator",
-            ()-> new QuantumAcceleratorItem(new Item.Properties().stacksTo(1).durability(2048)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

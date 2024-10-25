@@ -2,7 +2,7 @@
   "credit": "Made with Blockbench",
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "temporang:item/stone_boomerang"
+    "layer0": "temporang:item/iron_boomerang"
   },
   "display": {
     "thirdperson_righthand": {

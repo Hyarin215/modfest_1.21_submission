@@ -3,7 +3,7 @@ package com.doublepi.temporang;
 import com.doublepi.temporang.in_game.blocks.ModBlockEntities;
 import com.doublepi.temporang.in_game.blocks.ModBlocks;
 import com.doublepi.temporang.in_game.entities.ModEntities;
-import com.doublepi.temporang.utils.ModRenderers;
+import com.doublepi.temporang.utils.*;
 import com.doublepi.temporang.in_game.items.ModItems;
 import com.doublepi.temporang.in_game.items.ModTabs;
 
@@ -50,7 +50,9 @@ public class TemporangMod
         ModTabs.register(modEventBus);
         ModEntities.register(modEventBus);
         ModBlockEntities.register(modEventBus);
-        //ModMenuTypes.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+        ModRecipeTypes.register(modEventBus);
+        ModRecipeSerializers.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (temporang) to respond directly to events.
@@ -110,7 +112,7 @@ public class TemporangMod
 
         @SubscribeEvent
         public static void registerScreens(RegisterMenuScreensEvent event) {
-            //event.register(ModMenuTypes.PEDESTAL_MENU.get(), PedestalScreen::new);
+            ModScreens.register(event);
         }
     }
 }
