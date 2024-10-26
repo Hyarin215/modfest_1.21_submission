@@ -1,6 +1,6 @@
-package com.doublepi.temporang.in_game.items.rewards;
+package com.doublepi.temporang.in_game.items;
 
-import com.doublepi.temporang.in_game.blocks.ModBlocks;
+import com.doublepi.temporang.registries.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;

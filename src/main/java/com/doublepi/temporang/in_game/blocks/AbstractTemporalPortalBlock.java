@@ -1,10 +1,11 @@
-package com.doublepi.temporang.in_game.blocks.others;
+package com.doublepi.temporang.in_game.blocks;
 
-import com.doublepi.temporang.in_game.blocks.ModBlocks;
-import com.doublepi.temporang.in_game.items.ModItems;
-import com.doublepi.temporang.utils.ModLootTables;
+import com.doublepi.temporang.registries.ModBlocks;
+import com.doublepi.temporang.registries.ModItems;
+import com.doublepi.temporang.registries.ModLootTables;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
@@ -13,7 +14,11 @@ import net.minecraft.stats.Stats;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.monster.Husk;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
@@ -56,6 +61,8 @@ public class AbstractTemporalPortalBlock extends Block {
             double d2 = (double) pos.getZ() + 0.5;
             level.addParticle(ParticleTypes.PORTAL, d0 + Math.cos(angle),  pos.getY(), d2 + Math.sin(angle), 0.0, 2.0, 0.0);
         }
+        if (random.nextInt(100) == 0)
+            level.playLocalSound(pos, SoundEvents.AMBIENT_CAVE.value(), SoundSource.BLOCKS, 1,1, false);
     }
 
     @Override
@@ -109,11 +116,17 @@ public class AbstractTemporalPortalBlock extends Block {
         if(reward==null)
             return ItemInteractionResult.FAIL;
 
-        for (ItemStack itemStack : reward) {
-            player.addItem(itemStack);
+        if(level.getRandom().nextIntBetweenInclusive(0,10)>=7) {
+            level.playLocalSound(pos, SoundEvents.LIGHTNING_BOLT_THUNDER, SoundSource.BLOCKS, 1, 1, false);
+            summonDisaster(level, pos, player);
+        }else {
+            level.playLocalSound(pos, SoundEvents.NOTE_BLOCK_BIT.value(), SoundSource.BLOCKS, 1, 1, false);
+            for (ItemStack itemStack : reward) {
+                player.addItem(itemStack);
+            }
         }
 
-        level.playLocalSound(pos, SoundEvents.PORTAL_TRAVEL, SoundSource.BLOCKS, 1,1,false);
+
         EquipmentSlot equipmentSlot = (hand == InteractionHand.MAIN_HAND) ? EquipmentSlot.MAINHAND:EquipmentSlot.OFFHAND;
         stack.hurtAndBreak(1,player, equipmentSlot);
         player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
@@ -121,6 +134,11 @@ public class AbstractTemporalPortalBlock extends Block {
 
         return ItemInteractionResult.SUCCESS;
 
+    }
+
+    @Override
+    protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
+        super.tick(state, level, pos, random);
     }
 
     private List<ItemStack> generateReward(Level level, BlockState state, BlockPos pos, Player player, ResourceKey<LootTable> resourceKey){
@@ -135,6 +153,25 @@ public class AbstractTemporalPortalBlock extends Block {
         return lootTable.getRandomItems(lootparams, level.getRandom());
     }
 
-
-
+    private void summonDisaster(Level level, BlockPos pos, Player player){
+        int random = level.getRandom().nextIntBetweenInclusive(0,3);
+        switch (random){
+            case 0:
+                player.addEffect(new MobEffectInstance(MobEffects.CONFUSION,200,2));
+                break;
+            case 1:
+                player.addEffect(new MobEffectInstance(MobEffects.POISON,200,2));
+                break;
+            case 2:
+                for(int i=0;i<level.getRandom().nextIntBetweenInclusive(3,5); i++) {
+                    Husk zombie = new Husk(EntityType.HUSK,level);
+                    zombie.setBaby(true);
+                    zombie.setPos(pos.above(3).getCenter());
+                    level.addFreshEntity(zombie);
+                }
+                break;
+            case 3:
+                player.displayClientMessage(Component.literal(":3"),true);
+        }
+    }
 }

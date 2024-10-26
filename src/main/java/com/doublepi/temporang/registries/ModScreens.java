@@ -1,4 +1,4 @@
-package com.doublepi.temporang.utils;
+package com.doublepi.temporang.registries;
 
 import com.doublepi.temporang.in_game.blocks.refinery.RefineryScreen;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;

@@ -1,0 +1,14 @@
+{
+  "type": "temporang:refining",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.7,
+  "group": "copper_dust",
+  "ingredient": {
+    "item": "minecraft:raw_copper"
+  },
+  "result": {
+    "id": "temporang:copper_dust",
+    "count": 2
+  }
+}

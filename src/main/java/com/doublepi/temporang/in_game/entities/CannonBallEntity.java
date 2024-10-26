@@ -1,6 +1,7 @@
 package com.doublepi.temporang.in_game.entities;
 
-import com.doublepi.temporang.in_game.items.ModItems;
+import com.doublepi.temporang.registries.ModEntities;
+import com.doublepi.temporang.registries.ModItems;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;

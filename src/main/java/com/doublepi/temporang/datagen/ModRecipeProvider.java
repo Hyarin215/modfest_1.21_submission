@@ -2,9 +2,7 @@ package com.doublepi.temporang.datagen;
 
 
 import com.doublepi.temporang.TemporangMod;
-import com.doublepi.temporang.in_game.blocks.refinery.RefineryRecipe;
-import com.doublepi.temporang.in_game.items.ModItems;
-import com.doublepi.temporang.utils.ModRecipeSerializers;
+import com.doublepi.temporang.registries.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;

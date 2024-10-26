@@ -1,7 +1,7 @@
-package com.doublepi.temporang.in_game.blocks.others;
+package com.doublepi.temporang.in_game.blocks;
 
 import com.doublepi.temporang.in_game.entities.CannonBallEntity;
-import com.doublepi.temporang.in_game.items.ModItems;
+import com.doublepi.temporang.registries.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;

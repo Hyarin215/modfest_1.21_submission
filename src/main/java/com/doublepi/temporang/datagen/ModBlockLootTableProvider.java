@@ -1,6 +1,6 @@
 package com.doublepi.temporang.datagen;
 
-import com.doublepi.temporang.in_game.blocks.ModBlocks;
+import com.doublepi.temporang.registries.ModBlocks;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;

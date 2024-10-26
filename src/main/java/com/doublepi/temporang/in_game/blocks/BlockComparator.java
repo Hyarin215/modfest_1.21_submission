@@ -1,4 +1,4 @@
-package com.doublepi.temporang.in_game.blocks.others;
+package com.doublepi.temporang.in_game.blocks;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.Direction;

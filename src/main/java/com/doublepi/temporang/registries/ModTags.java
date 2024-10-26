@@ -1,4 +1,4 @@
-package com.doublepi.temporang.in_game.items;
+package com.doublepi.temporang.registries;
 
 import com.doublepi.temporang.TemporangMod;
 import net.minecraft.resources.ResourceLocation;

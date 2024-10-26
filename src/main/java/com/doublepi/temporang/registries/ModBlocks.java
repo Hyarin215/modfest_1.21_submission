@@ -1,14 +1,13 @@
-package com.doublepi.temporang.in_game.blocks;
+package com.doublepi.temporang.registries;
 
 import com.doublepi.temporang.TemporangMod;
-import com.doublepi.temporang.in_game.blocks.others.CannonBlock;
-import com.doublepi.temporang.in_game.blocks.others.AbstractTemporalPortalBlock;
-import com.doublepi.temporang.in_game.blocks.others.BlockComparator;
+import com.doublepi.temporang.in_game.blocks.CannonBlock;
+import com.doublepi.temporang.in_game.blocks.AbstractTemporalPortalBlock;
+import com.doublepi.temporang.in_game.blocks.BlockComparator;
 import com.doublepi.temporang.in_game.blocks.drill.DrillBlock;
 import com.doublepi.temporang.in_game.blocks.refinery.RefineryBlock;
 import com.doublepi.temporang.in_game.blocks.scanner.ScannerBlock;
 import com.doublepi.temporang.in_game.blocks.totem.TotemBlock;
-import com.doublepi.temporang.in_game.items.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

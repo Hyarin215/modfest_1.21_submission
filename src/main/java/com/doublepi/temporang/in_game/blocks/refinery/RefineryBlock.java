@@ -1,6 +1,6 @@
 package com.doublepi.temporang.in_game.blocks.refinery;
 
-import com.doublepi.temporang.in_game.blocks.ModBlockEntities;
+import com.doublepi.temporang.registries.ModBlockEntities;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.stats.Stats;
@@ -8,7 +8,6 @@ import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.AbstractFurnaceBlock;
-import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;

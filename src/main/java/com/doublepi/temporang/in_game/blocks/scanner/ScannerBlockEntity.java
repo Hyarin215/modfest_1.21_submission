@@ -1,6 +1,6 @@
 package com.doublepi.temporang.in_game.blocks.scanner;
 
-import com.doublepi.temporang.in_game.blocks.ModBlockEntities;
+import com.doublepi.temporang.registries.ModBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;

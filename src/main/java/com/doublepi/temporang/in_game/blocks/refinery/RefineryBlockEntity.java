@@ -1,7 +1,7 @@
 package com.doublepi.temporang.in_game.blocks.refinery;
 
-import com.doublepi.temporang.in_game.blocks.ModBlockEntities;
-import com.doublepi.temporang.utils.ModRecipeTypes;
+import com.doublepi.temporang.registries.ModBlockEntities;
+import com.doublepi.temporang.registries.ModRecipeTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;

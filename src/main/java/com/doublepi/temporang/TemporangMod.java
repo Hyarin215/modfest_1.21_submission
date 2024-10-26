@@ -1,18 +1,10 @@
 package com.doublepi.temporang;
 
-import com.doublepi.temporang.in_game.blocks.ModBlockEntities;
-import com.doublepi.temporang.in_game.blocks.ModBlocks;
-import com.doublepi.temporang.in_game.entities.ModEntities;
-import com.doublepi.temporang.utils.*;
-import com.doublepi.temporang.in_game.items.ModItems;
-import com.doublepi.temporang.in_game.items.ModTabs;
-
+import com.doublepi.temporang.registries.*;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import org.slf4j.Logger;
-
 import com.mojang.logging.LogUtils;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Blocks;
@@ -41,7 +33,7 @@ public class TemporangMod
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public TemporangMod(IEventBus modEventBus, ModContainer modContainer) {
-        // Register the commonSetup method for modloading
+        // Register the commonSetup method for mod loading
         modEventBus.addListener(this::commonSetup);
 
         ModItems.register(modEventBus);

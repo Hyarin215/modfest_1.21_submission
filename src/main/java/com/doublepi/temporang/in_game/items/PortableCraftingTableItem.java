@@ -1,4 +1,4 @@
-package com.doublepi.temporang.in_game.items.rewards;
+package com.doublepi.temporang.in_game.items;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;

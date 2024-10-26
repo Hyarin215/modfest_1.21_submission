@@ -1,6 +1,6 @@
 package com.doublepi.temporang.in_game.blocks.totem;
 
-import com.doublepi.temporang.in_game.blocks.ModBlockEntities;
+import com.doublepi.temporang.registries.ModBlockEntities;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;

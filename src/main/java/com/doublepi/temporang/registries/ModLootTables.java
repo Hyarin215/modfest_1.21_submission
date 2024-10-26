@@ -1,4 +1,4 @@
-package com.doublepi.temporang.utils;
+package com.doublepi.temporang.registries;
 
 import com.doublepi.temporang.TemporangMod;
 import net.minecraft.core.registries.Registries;

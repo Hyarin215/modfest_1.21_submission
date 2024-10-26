@@ -1,8 +1,8 @@
-package com.doublepi.temporang.in_game.items;
+package com.doublepi.temporang.registries;
 
 import com.doublepi.temporang.TemporangMod;
-import com.doublepi.temporang.in_game.items.rewards.CarvingKnifeItem;
-import com.doublepi.temporang.in_game.items.rewards.PortableCraftingTableItem;
+import com.doublepi.temporang.in_game.items.CarvingKnifeItem;
+import com.doublepi.temporang.in_game.items.PortableCraftingTableItem;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.ChorusFruitItem;

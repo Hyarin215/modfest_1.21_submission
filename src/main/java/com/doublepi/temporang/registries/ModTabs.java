@@ -1,7 +1,6 @@
-package com.doublepi.temporang.in_game.items;
+package com.doublepi.temporang.registries;
 
 import com.doublepi.temporang.TemporangMod;
-import com.doublepi.temporang.in_game.blocks.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
