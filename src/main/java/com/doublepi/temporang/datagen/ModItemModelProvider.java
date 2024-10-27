@@ -13,5 +13,8 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.TIME_FRAGMENT.get());
         basicItem(ModItems.CANNON_BALL.get());
+        basicItem(ModItems.IRON_DUST.get());
+        basicItem(ModItems.COPPER_DUST.get());
+        basicItem(ModItems.GOLD_DUST.get());
     }
 }

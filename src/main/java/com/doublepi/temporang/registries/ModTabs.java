@@ -36,6 +36,9 @@ public class ModTabs {
                 output.accept(ModItems.IRON_BOOMERANG.get());
                 output.accept(ModBlocks.CANNON.get());
                 output.accept(ModBlocks.REFINERY.get());
+                output.accept(ModItems.COPPER_DUST.get());
+                output.accept(ModItems.IRON_DUST.get());
+                output.accept(ModItems.GOLD_DUST.get());
 
                 //industrial age
                 output.accept(ModItems.INDUSTRIAL_BOOMERANG.get());
@@ -45,6 +48,7 @@ public class ModTabs {
                 //information age
                 output.accept(ModItems.INFORMATIONAL_BOOMERANG.get());
                 output.accept(ModBlocks.SCANNER.get());
+                output.accept(ModItems.ANGEL_RING.get());
 
             }).build());
 

@@ -6,8 +6,8 @@ import com.doublepi.temporang.registries.ModRecipeTypes;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
 
-public class RefineryRecipe extends AbstractCookingRecipe {
-    public RefineryRecipe(String group, CookingBookCategory category, Ingredient ingredient, ItemStack result, float experience, int cookingTime) {
+public class RefiningRecipe extends AbstractCookingRecipe {
+    public RefiningRecipe(String group, CookingBookCategory category, Ingredient ingredient, ItemStack result, float experience, int cookingTime) {
         super(ModRecipeTypes.REFINING.get(), group, category, ingredient, result, experience, cookingTime);
     }
 

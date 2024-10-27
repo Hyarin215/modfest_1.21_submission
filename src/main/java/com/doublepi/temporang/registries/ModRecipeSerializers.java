@@ -1,14 +1,12 @@
 package com.doublepi.temporang.registries;
 
 import com.doublepi.temporang.TemporangMod;
-import com.doublepi.temporang.in_game.blocks.refinery.RefineryRecipe;
+import com.doublepi.temporang.in_game.blocks.refinery.RefiningRecipe;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.crafting.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
-
-import java.util.function.Supplier;
 
 public class ModRecipeSerializers {
 
@@ -19,8 +17,8 @@ public class ModRecipeSerializers {
 //            RECIPE_SERIALIZERS.register("refining", () ->{
 //                return new SimpleCookingSerializer<AbstractCookingRecipe>(RefineryRecipe::new,200);
 //            });
-        public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<RefineryRecipe>> REFINING_SERIALIZER =
-        RECIPE_SERIALIZERS.register("refining", ()->new SimpleCookingSerializer<>(RefineryRecipe::new, 200));
+        public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<RefiningRecipe>> REFINING_SERIALIZER =
+        RECIPE_SERIALIZERS.register("refining", ()->new SimpleCookingSerializer<>(RefiningRecipe::new, 200));
 
     public static void register(IEventBus event){
         RECIPE_SERIALIZERS.register(event);

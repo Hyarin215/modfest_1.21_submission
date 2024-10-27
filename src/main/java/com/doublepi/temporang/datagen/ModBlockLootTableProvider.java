@@ -28,6 +28,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
             dropWhenSilkTouch(ModBlocks.TOTEM.get());
             dropSelf(ModBlocks.CANNON.get());
             dropSelf(ModBlocks.DRILL.get());
+            dropSelf(ModBlocks.REFINERY.get());
+            dropSelf(ModBlocks.SCANNER.get());
 //            this.add(ModBlocks.TEMPORAL_PORTAL_MIDDLE.get(), block->noDrop());
 //            this.add(ModBlocks.TEMPORAL_PORTAL_TOP.get(), block->noDrop());
 //            this.add(ModBlocks.TEMPORAL_PORTAL_BOTTOM.get(), block->noDrop());

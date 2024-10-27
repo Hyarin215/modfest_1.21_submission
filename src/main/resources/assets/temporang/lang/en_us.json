@@ -9,6 +9,10 @@
   "item.temporang.carving_knife": "Carving Knife",
   "item.temporang.time_fragment": "Time Fragment",
 
+  "item.temporang.copper_dust": "Copper Dust",
+  "item.temporang.iron_dust": "Iron Dust",
+  "item.temporang.gold_dust": "Gold Dust",
+
   "block.temporang.totem": "Totem",
   "block.temporang.temporal_portal": "Temporal Obelisk",
   "block.temporang.temporal_portal_top": "Temporal Obelisk",

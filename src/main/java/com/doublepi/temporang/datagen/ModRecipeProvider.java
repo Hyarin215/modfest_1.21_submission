@@ -6,6 +6,7 @@ import com.doublepi.temporang.registries.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
@@ -20,6 +21,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(RecipeOutput pRecipeOutput) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STONE_BOOMERANG.get())
+                        .pattern(" T ")
+                        .pattern("T T")
+                        .pattern("   ")
+                        .define('T', Items.BASALT)
+                        .unlockedBy("seen_obelisk", has(Items.BASALT));
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.IRON_BOOMERANG.get())
                 .pattern("TTT")
                 .pattern("TBT")

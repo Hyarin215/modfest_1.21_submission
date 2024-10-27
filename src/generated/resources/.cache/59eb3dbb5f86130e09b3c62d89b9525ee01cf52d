@@ -1,5 +1,7 @@
-// 1.21.1	2024-10-20T14:30:02.305183	Loot Tables
+// 1.21.1	2024-10-27T16:14:57.7358843	Loot Tables
 70d6a942cc89a5835bbdb1a2b359ded5b10aa431 data/temporang/loot_table/blocks/block_comparator.json
 9d8fa926336deee8a09fe94bfb90c2403bc6eb67 data/temporang/loot_table/blocks/cannon.json
 135687132bd2f3b3fe492317a412e7eeef60755f data/temporang/loot_table/blocks/redstone_drill.json
+c592dd5efaec8e83f20b79f35776cb40b9924876 data/temporang/loot_table/blocks/refinery.json
+dde057bac0c2fb235eabd7591916ef4d9420469d data/temporang/loot_table/blocks/scanner.json
 2ad4560be772c01267c39c55eb05471b57e75455 data/temporang/loot_table/blocks/totem.json

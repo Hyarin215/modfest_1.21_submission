@@ -1,7 +1,7 @@
 {
   "type": "temporang:refining",
   "category": "misc",
-  "cookingtime": 100,
+  "cookingtime": 200,
   "experience": 0.7,
   "group": "iron_dust",
   "ingredient": {
