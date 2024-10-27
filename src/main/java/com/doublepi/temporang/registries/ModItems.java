@@ -1,7 +1,7 @@
 package com.doublepi.temporang.registries;
 
 import com.doublepi.temporang.TemporangMod;
-import com.doublepi.temporang.in_game.items.AngelRingItem;
+import com.doublepi.temporang.in_game.items.GeneticInjectionItem;
 import com.doublepi.temporang.in_game.items.CarvingKnifeItem;
 import com.doublepi.temporang.in_game.items.PortableCraftingTableItem;
 import net.minecraft.core.component.DataComponents;
@@ -50,8 +50,8 @@ public class ModItems {
 
     //Digital Age Rewards
 
-    public static final DeferredItem<Item> ANGEL_RING = ITEMS.register("angel_ring",
-            ()-> new AngelRingItem(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> GENETIC_INJECTION = ITEMS.register("genetic_injection",
+            ()-> new GeneticInjectionItem(new Item.Properties().stacksTo(1).durability(32)));
 
 
     public static final DeferredItem<Item> TIME_FRAGMENT = ITEMS.register("time_fragment",

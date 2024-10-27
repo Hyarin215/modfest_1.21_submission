@@ -38,6 +38,7 @@ public class TemporangMod
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEffects.register(modEventBus);
 
         ModTabs.register(modEventBus);
         ModEntities.register(modEventBus);

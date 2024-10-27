@@ -48,7 +48,7 @@ public class ModTabs {
                 //information age
                 output.accept(ModItems.INFORMATIONAL_BOOMERANG.get());
                 output.accept(ModBlocks.SCANNER.get());
-                output.accept(ModItems.ANGEL_RING.get());
+                output.accept(ModItems.GENETIC_INJECTION.get());
 
             }).build());
 

@@ -8,10 +8,12 @@
   "item.temporang.portable_crafting_table": "Portable Crafting Table",
   "item.temporang.carving_knife": "Carving Knife",
   "item.temporang.time_fragment": "Time Fragment",
-
+  "item.temporang.genetic_injection": "Genetic Injection",
   "item.temporang.copper_dust": "Copper Dust",
   "item.temporang.iron_dust": "Iron Dust",
   "item.temporang.gold_dust": "Gold Dust",
+
+  "effect.temporang.injected": "Injected!",
 
   "block.temporang.totem": "Totem",
   "block.temporang.temporal_portal": "Temporal Obelisk",

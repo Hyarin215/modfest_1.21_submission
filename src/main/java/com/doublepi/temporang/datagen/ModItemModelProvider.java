@@ -16,5 +16,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.IRON_DUST.get());
         basicItem(ModItems.COPPER_DUST.get());
         basicItem(ModItems.GOLD_DUST.get());
+        basicItem(ModItems.GENETIC_INJECTION.get());
     }
 }

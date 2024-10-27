@@ -12,6 +12,17 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:glass",
+          "count": 64,
+          "weight": 15
+        },
+        {
+          "type": "minecraft:item",
+          "name": "temporang:genetic_injection",
+          "weight": 15
+        },
+        {
+          "type": "minecraft:item",
+          "name": "temporang:scanner",
           "weight": 15
         },
         {
