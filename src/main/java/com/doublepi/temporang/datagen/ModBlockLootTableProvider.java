@@ -30,25 +30,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
             dropSelf(ModBlocks.DRILL.get());
             dropSelf(ModBlocks.REFINERY.get());
             dropSelf(ModBlocks.SCANNER.get());
-//            this.add(ModBlocks.TEMPORAL_PORTAL_MIDDLE.get(), block->noDrop());
-//            this.add(ModBlocks.TEMPORAL_PORTAL_TOP.get(), block->noDrop());
-//            this.add(ModBlocks.TEMPORAL_PORTAL_BOTTOM.get(), block->noDrop());
-//            this.add(ModBlocks.BLACK_OPAL_ORE.get(),
-//                    block -> createOreDrop(ModBlocks.BLACK_OPAL_ORE.get(), ModItems.RAW_BLACK_OPAL.get()));
-//            this.add(ModBlocks.BLACK_OPAL_DEEPSLATE_ORE.get(),
-//                    block -> createMultipleOreDrops(ModBlocks.BLACK_OPAL_DEEPSLATE_ORE.get(), ModItems.RAW_BLACK_OPAL.get(), 2, 5));
-//            this.add(ModBlocks.BLACK_OPAL_END_ORE.get(),
-//                    block -> createMultipleOreDrops(ModBlocks.BLACK_OPAL_END_ORE.get(), ModItems.RAW_BLACK_OPAL.get(), 4, 7));
-//            this.add(ModBlocks.BLACK_OPAL_NETHER_ORE.get(),
-//                    block -> createMultipleOreDrops(ModBlocks.BLACK_OPAL_NETHER_ORE.get(), ModItems.RAW_BLACK_OPAL.get(), 3, 9));
-        }
-
-        protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {
-            HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
-            return this.createSilkTouchDispatchTable(pBlock, this.applyExplosionDecay(pBlock,
-                    LootItem.lootTableItem(item)
-                            .apply(SetItemCountFunction.setCount(UniformGenerator.between(minDrops, maxDrops)))
-                            .apply(ApplyBonusCount.addOreBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))));
         }
 
         @Override

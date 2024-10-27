@@ -13,16 +13,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
     @Override
     protected void registerStatesAndModels() {
-//        blockWithItem(ModBlocks.BLACK_OPAL_BLOCK);
-//        blockWithItem(ModBlocks.RAW_BLACK_OPAL_BLOCK);
-//        blockWithItem(ModBlocks.BLACK_OPAL_ORE);
-//        blockWithItem(ModBlocks.BLACK_OPAL_DEEPSLATE_ORE );
-//        blockWithItem(ModBlocks.BLACK_OPAL_END_ORE);
-//        blockWithItem(ModBlocks.BLACK_OPAL_NETHER_ORE);
-//        blockWithItem(ModBlocks.MAGIC_BLOCK);
-    }
-    private void blockWithItem(DeferredBlock<Block> deferredBlock) {
-        simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
     }
 
 
