@@ -6,11 +6,9 @@ import com.doublepi.temporang.registries.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import net.neoforged.neoforge.common.data.internal.NeoForgeItemTagsProvider;
 import org.jetbrains.annotations.Nullable;
 import java.util.concurrent.CompletableFuture;
 
@@ -30,10 +28,5 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.IRON_DUST.get())
                 .add(ModItems.GOLD_DUST.get())
                 .add(ModItems.COPPER_DUST.get());
-//        tag(ModTags.Items.TRANSFORMABLE_ITEMS)
-//                .add(ModItems.BLACK_OPAL.get())
-//                .add(Items.COAL)
-//                .add(Items.DANDELION)
-//                .add(Items.COMPASS);
     }
 }

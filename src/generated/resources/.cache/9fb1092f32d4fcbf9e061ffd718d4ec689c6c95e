@@ -1,7 +1,9 @@
-// 1.21.1	2024-10-20T14:30:02.3071699	Recipes
+// 1.21.1	2024-10-27T22:21:05.0585684	Recipes
 c44d7269a3efef4ac4e319bffaccfdad92d176ca data/temporang/advancement/recipes/misc/industrial_boomerang.json
 0ad73b68311f23cd655dec277d4f2e1e262bf998 data/temporang/advancement/recipes/misc/informational_boomerang.json
 061f8a55965484ae469f416b401309241fc438c3 data/temporang/advancement/recipes/misc/iron_boomerang.json
+176c5f0a45fc41a4ecc7a00598a3217d24d96c43 data/temporang/advancement/recipes/misc/stone_boomerang.json
 e7daca78d2e4ebf75178a43279b7902ab4b319f9 data/temporang/recipe/industrial_boomerang.json
 da217134402d09e51868d44ba3e833285a5095b5 data/temporang/recipe/informational_boomerang.json
 623d46035d0e9a8c8fe3ebdd2f381389db5f93d8 data/temporang/recipe/iron_boomerang.json
+6c5c3da49abf6edf2a88ff8c5791fb813c22b163 data/temporang/recipe/stone_boomerang.json
