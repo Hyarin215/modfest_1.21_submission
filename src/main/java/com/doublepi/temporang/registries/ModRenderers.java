@@ -1,5 +1,6 @@
 package com.doublepi.temporang.registries;
 
+import com.doublepi.temporang.in_game.blocks.black_boxer.BlackBoxerRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.neoforged.api.distmarker.Dist;
@@ -13,9 +14,9 @@ public class ModRenderers {
 //            ResourceLocation.fromNamespaceAndPath(TemporangMod.MOD_ID, "scanner"), "main");
 
     public static void register(EntityRenderersEvent.RegisterRenderers event){
-
-        EntityRenderers.register(ModEntities.CANNON_BALL_ENTITY.get(), ThrownItemRenderer::new);
-        EntityRenderers.register(ModEntities.BOOMERANG_ENTITY.get(), ThrownItemRenderer::new);
+        event.registerEntityRenderer(ModEntities.CANNON_BALL_ENTITY.get(), ThrownItemRenderer::new);
+        event.registerEntityRenderer(ModEntities.BOOMERANG_ENTITY.get(), ThrownItemRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.BLACK_BOXER_BE.get(), BlackBoxerRenderer::new);
         //event.registerBlockEntityRenderer(ModBlockEntities.SCANNER_BE.get(), ScannerRenderer::new);
 
     }

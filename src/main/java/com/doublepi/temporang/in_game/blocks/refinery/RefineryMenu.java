@@ -12,7 +12,7 @@ import net.minecraft.world.inventory.RecipeBookType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
+
 public class RefineryMenu extends AbstractFurnaceMenu {
 
 

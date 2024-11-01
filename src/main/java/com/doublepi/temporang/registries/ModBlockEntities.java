@@ -1,6 +1,7 @@
 package com.doublepi.temporang.registries;
 
 import com.doublepi.temporang.TemporangMod;
+import com.doublepi.temporang.in_game.blocks.black_boxer.BlackBoxerBlockEntity;
 import com.doublepi.temporang.in_game.blocks.drill.DrillBlockEntity;
 import com.doublepi.temporang.in_game.blocks.refinery.RefineryBlockEntity;
 import com.doublepi.temporang.in_game.blocks.scanner.ScannerBlockEntity;
@@ -20,6 +21,10 @@ public class ModBlockEntities {
     public static final Supplier<BlockEntityType<TotemBlockEntity>> TOTEM_BE =
             BLOCK_ENTITIES.register("totem_be", () -> BlockEntityType.Builder.of(
                     TotemBlockEntity::new, ModBlocks.TOTEM.get()).build(null));
+
+    public static final Supplier<BlockEntityType<BlackBoxerBlockEntity>> BLACK_BOXER_BE =
+            BLOCK_ENTITIES.register("black_boxer_be", () -> BlockEntityType.Builder.of(
+                    BlackBoxerBlockEntity::new, ModBlocks.BLACK_BOXER.get()).build(null));
 
     public static final Supplier<BlockEntityType<DrillBlockEntity>> DRILL_BE =
             BLOCK_ENTITIES.register("drill_be", () -> BlockEntityType.Builder.of(

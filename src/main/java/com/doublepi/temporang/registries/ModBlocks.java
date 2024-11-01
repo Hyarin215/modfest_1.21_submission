@@ -4,6 +4,9 @@ import com.doublepi.temporang.TemporangMod;
 import com.doublepi.temporang.in_game.blocks.CannonBlock;
 import com.doublepi.temporang.in_game.blocks.AbstractTemporalPortalBlock;
 import com.doublepi.temporang.in_game.blocks.BlockComparator;
+import com.doublepi.temporang.in_game.blocks.black_boxer.BlackBoxerBlock;
+import com.doublepi.temporang.in_game.blocks.black_boxer.InputBlock;
+import com.doublepi.temporang.in_game.blocks.black_boxer.OutputBlock;
 import com.doublepi.temporang.in_game.blocks.drill.DrillBlock;
 import com.doublepi.temporang.in_game.blocks.refinery.RefineryBlock;
 import com.doublepi.temporang.in_game.blocks.scanner.ScannerBlock;
@@ -46,6 +49,18 @@ public class ModBlocks {
     public static final DeferredBlock<Block> SCANNER = registerBlock("scanner",
             ()-> new ScannerBlock(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.ANVIL)));
+
+    public static final DeferredBlock<Block> BLACK_BOXER = registerBlock("black_boxer",
+            ()-> new BlackBoxerBlock(BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.ANVIL)));
+
+    public static final DeferredBlock<Block> INPUT_BLOCK = registerBlock("input_block",
+            ()-> new InputBlock(BlockBehaviour.Properties.of()
+                    .strength(4f).sound(SoundType.STONE)));
+
+    public static final DeferredBlock<Block> OUTPUT_BLOCK = registerBlock("output_block",
+            ()-> new OutputBlock(BlockBehaviour.Properties.of()
+                    .strength(4f).sound(SoundType.STONE)));
 
     public static final DeferredBlock<Block> TEMPORAL_PORTAL_MIDDLE = registerBlock("temporal_portal",
             ()-> new AbstractTemporalPortalBlock(BlockBehaviour.Properties.of().pushReaction(PushReaction.BLOCK)

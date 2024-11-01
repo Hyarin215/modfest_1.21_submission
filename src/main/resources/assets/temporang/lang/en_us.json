@@ -24,6 +24,9 @@
   "block.temporang.redstone_drill": "Redstone Drill",
   "block.temporang.scanner": "Mob Scanner",
   "block.temporang.refinery": "Refinery",
+  "block.temporang.black_boxer": "Black Boxer",
+  "block.temporang.input_block": "Input Block",
+  "block.temporang.output_block": "Output Block",
 
   "entity.temporang.cannon_ball": "Cannon Ball",
 

@@ -49,6 +49,10 @@ public class ModTabs {
                 output.accept(ModItems.INFORMATIONAL_BOOMERANG.get());
                 output.accept(ModBlocks.SCANNER.get());
                 output.accept(ModItems.GENETIC_INJECTION.get());
+                output.accept(ModBlocks.BLACK_BOXER.get());
+                output.accept(ModBlocks.INPUT_BLOCK.get());
+                output.accept(ModBlocks.OUTPUT_BLOCK.get());
+
 
             }).build());
 

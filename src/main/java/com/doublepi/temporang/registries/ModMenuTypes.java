@@ -4,11 +4,14 @@ import com.doublepi.temporang.TemporangMod;
 import com.doublepi.temporang.in_game.blocks.refinery.RefineryMenu;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.inventory.*;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.extensions.IMenuTypeExtension;
 import net.neoforged.neoforge.network.IContainerFactory;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+
 
 public class ModMenuTypes {
     public static final DeferredRegister<MenuType<?>> MENUS =

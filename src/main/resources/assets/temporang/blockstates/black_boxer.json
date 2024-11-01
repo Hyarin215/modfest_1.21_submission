@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "temporang:block/black_boxer/black_boxer",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "temporang:block/black_boxer/black_boxer"
+    },
+    "facing=south": {
+      "model": "temporang:block/black_boxer/black_boxer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "temporang:block/black_boxer/black_boxer",
+      "y": 270
+    }
+  }
+}
