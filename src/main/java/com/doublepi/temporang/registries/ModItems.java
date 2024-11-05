@@ -53,6 +53,8 @@ public class ModItems {
     public static final DeferredItem<Item> GENETIC_INJECTION = ITEMS.register("genetic_injection",
             ()-> new GeneticInjectionItem(new Item.Properties().stacksTo(1).durability(32)));
 
+    public static final DeferredItem<Item> HOVERBOARD = ITEMS.register("hoverboard",
+            () -> new Item(new Item.Properties().stacksTo(1)));
 
     public static final DeferredItem<Item> TIME_FRAGMENT = ITEMS.register("time_fragment",
             ()-> new ChorusFruitItem(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE,true).food(Foods.CHORUS_FRUIT)));

@@ -1,8 +1,8 @@
 package com.doublepi.temporang.registries;
 
 import com.doublepi.temporang.TemporangMod;
-import com.doublepi.temporang.in_game.entities.BoomerangEntity;
 import com.doublepi.temporang.in_game.entities.CannonBallEntity;
+import com.doublepi.temporang.in_game.entities.hoverboard.HoverboardEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -22,11 +22,12 @@ public class ModEntities {
                     EntityType.Builder.<CannonBallEntity>of(CannonBallEntity::new, MobCategory.MISC)
                     .sized(0.25f, 0.25f).clientTrackingRange(10).setTrackingRange(4).build(CANNON_BALL_NAME));
 
-    public static final String BOOMERANG_NAME = "boomerang";
-    public static final Supplier<EntityType<BoomerangEntity>> BOOMERANG_ENTITY =
-            ENTITY_TYPES.register(BOOMERANG_NAME, () ->
-                    EntityType.Builder.<BoomerangEntity>of(BoomerangEntity::new, MobCategory.MISC)
-                            .sized(0.25f, 0.25f).clientTrackingRange(10).setTrackingRange(4).build(BOOMERANG_NAME));
+    public static final String HOVERBOARD_NAME = "hoverboard";
+    public static final Supplier<EntityType<HoverboardEntity>> HOVERBOARD_ENTITY =
+            ENTITY_TYPES.register(HOVERBOARD_NAME, () ->
+                    EntityType.Builder.<HoverboardEntity>of(HoverboardEntity::new, MobCategory.MISC)
+                            .sized(0.75f, 0.20f).eyeHeight(0.20f).clientTrackingRange(10).build(CANNON_BALL_NAME));
+
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
