@@ -11,6 +11,7 @@ import net.minecraft.world.entity.player.Player;
 import java.util.Iterator;
 
 public class InjectedEffect extends MobEffect {
+    public boolean couldFly;
     public InjectedEffect(MobEffectCategory category, int color) {
         super(category, color);
     }
@@ -21,6 +22,13 @@ public class InjectedEffect extends MobEffect {
     }
 
     @Override
+    public void onEffectStarted(LivingEntity livingEntity, int amplifier) {
+        if(livingEntity instanceof Player player)
+            couldFly = player.getAbilities().mayfly;
+        super.onEffectStarted(livingEntity, amplifier);
+    }
+
+    @Override
     public boolean applyEffectTick(LivingEntity livingEntity, int amplifier) {
         MobEffectInstance REGEN = new MobEffectInstance(MobEffects.REGENERATION, 20, amplifier+1);
         MobEffectInstance ABSORPTION = new MobEffectInstance(MobEffects.ABSORPTION, 20, amplifier+1);
@@ -28,12 +36,12 @@ public class InjectedEffect extends MobEffect {
         livingEntity.addEffect(REGEN);
         livingEntity.addEffect(ABSORPTION);
         livingEntity.addEffect(DAMAGE_RESIST);
-
         if(livingEntity instanceof Player player) {
+
             player.getAbilities().mayfly=true;
             if (getCurrentDuration(livingEntity) <= 5) {
                 player.getAbilities().flying=false;
-                player.getAbilities().mayfly=false;
+                player.getAbilities().mayfly=couldFly;
             }
         }
         return super.applyEffectTick(livingEntity, amplifier);
